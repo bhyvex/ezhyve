@@ -1,0 +1,16 @@
+# DISTSITE=""           # Hostname and directory for binary distribution sets
+# ISOSITE=""            # Hostname and directory for ISO file
+ISOSITE="$OBSD_MIRROR/pub/OpenBSD/snapshots/amd64/"
+# ISOIMG=""             # ISO filename for remote fetch
+ISOIMG="install54.iso"
+# GRUBBOOTCMD=""        # grub-bhyve command to boot from IMG
+GRUBBOOTCMD="echo -e \"kopenbsd -h com0 (hd0,openbsd1)/bsd\nboot\" | grub-bhyve -r hd0"
+#GRUBBOOTCMD="echo -e \"kopenbsd -h com0 (hd0,openbsd1)/bsd\nboot\" | grub-bhyve -r hd0 -m $VMDIR/device.map -M $VMRAM $VMNAME"
+# GRUBISOCMD=""         # grub-bhyve command to boot from ISO
+GRUBISOCMD="echo -e \"kopenbsd -h com0 (cd0)/5.4/amd64/bsd\nboot\" | grub-bhyve -r cd0"
+# HOSTBRIDGE=""         # "amd_" for the AMD hostbridge
+HOSTBRIDGE="amd_"
+# BHYVEFLAGS=""         # Additional bhyve(8) flags
+BHYVEFLAGS="-W"
+# VIRTIO=""             # "virtio-blk" for legacy (non-AHCI) VirtIO
+VIRTIO="virtio-blk"

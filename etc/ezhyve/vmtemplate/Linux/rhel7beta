@@ -1,0 +1,7 @@
+ISOSITE="ftp://ftp.redhat.com/redhat/rhel/beta/7/x86_64/iso/"
+ISOIMG="rhel-everything-7.0-beta-1-x86_64-dvd.iso"
+GRUBBOOTCMD="echo -e \"linux /vmlinuz-3.10.0-54.0.1.el7.x86_64 ro root=/dev/mapper/rhel-root ro rd.md=0 rd.dm=0 rd.lvm.lv=rhel/swap\ninitrd /initramfs-3.10.0-54.0.1.el7.x86_64.img\nboot\" | grub-bhyve -r hd0,msdos1" 
+GRUBISOCMD="echo -e \"linux /isolinux/vmlinuz text\ninitrd /isolinux/initrd.img\nboot\" | grub-bhyve -r cd0"
+BHYVEFLAGS="-w"
+VIRTIO="virtio-blk"
+

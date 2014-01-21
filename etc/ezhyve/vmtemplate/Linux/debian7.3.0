@@ -1,0 +1,15 @@
+# DISTSITE=""           # Hostname and directory for binary distribution sets
+# ISOSITE=""            # Hostname and directory for ISO file
+ISOSITE="ftp://cdimage.debian.org/cdimage/release/7.3.0/amd64/iso-cd/"
+# ISOIMG=""             # ISO filename for remote fetch
+ISOIMG="debian-7.3.0-amd64-CD-1.iso"
+# GRUBBOOTCMD=""        # grub-bhyve command to boot from IMG
+GRUBBOOTCMD="grub-bhyve -r hd0,msdos1"
+#GRUBBOOTCMD="grub-bhyve -r hd0,msdos1 -m $VMDIR/device.map -M $VMRAM $VMNAME"
+# GRUBISOCMD=""         # grub-bhyve command to boot from ISO
+#GRUBISOCMD="grub-bhyve -r cd0 -m $VMDIR/device.map -M $VMRAM $VMNAME"
+GRUBISOCMD="grub-bhyve -r cd0"
+# HOSTBRIDGE=""         # "amd_" for the AMD hostbridge
+# BHYVEFLAGS=""         # Additional bhyve(8) flags
+# VIRTIO=""             # "virtio-blk" for legacy (non-AHCI) VirtIO
+VIRTIO="virtio-blk"

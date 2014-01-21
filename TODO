@@ -1,0 +1,18 @@
+* Clean up the code
+* Clean up (debug) messages
+* check every TODO in ezhyve.sh and functions.sh
+* more networking stuff (define IPs while creating vm?)
+* -D / EZHYVE_VMDEV is probaply broken, need to redo this
+* FreeBSD provisioning should use ezhyve_fetch() instead of fbsdfetch()
+* FreeBSD provisioning add support for FreeBSD 8.x (?)
+* FreeBSD provisioning should honor per VM FBSD_DISTFILES="kernel.txz base.txz"; FBSD_TIMEZONE ... something like ezjails flavours/example/etc/rc.d/ezjail.flavour.example
+* FreeBSD provisioning set root pw
+* get rid of tempfile usage in ezhyve_generatevmid() and ezhyve_cdbootdevicemap()
+* make output readable on 80x24
+* more templates for installation (to test: OpenBSD, pfSense, DragonflyBSD(?), FreeNAS?, more Linux Distributions (which work))
+* ezhyve start all vms beneath $PATH_VMCONF
+* create an ezhyve rc script
+* find out which Host OS/bhyve we have and decide which bhyve features to use (BHYVEFLAGS), should also be added to templates
+* EZHYVE_VMID should be customizable (start from id)
+* write a manpage
+* echo the called bhyve command to a debug file

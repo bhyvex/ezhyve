@@ -1,0 +1,5 @@
+ISOSITE="ftp://ftp.osuosl.org/pub/ubuntu-releases/13.10/"
+ISOIMG="ubuntu-13.10-server-amd64.iso"
+GRUBBOOTCMD="grub-bhyve -r hd0,msdos1"
+GRUBISOCMD="grub-bhyve -r cd0"
+VIRTIO="virtio-blk"

@@ -1,0 +1,17 @@
+# DISTSITE=""           # Hostname and directory for binary distribution sets
+# ISOSITE=""            # Hostname and directory for ISO file
+ISOSITE="ftp://ftp.osuosl.org/.1/centos/6.5/isos/x86_64/"
+# ISOIMG=""             # ISO filename for remote fetch
+ISOIMG="CentOS-6.5-x86_64-minimal.iso"
+# GRUBBOOTCMD=""        # grub-bhyve command to boot from IMG
+GRUBBOOTCMD="echo -e \"linux /vmlinuz-2.6.32-431.el6.x86_64 ro root=/dev/mapper/VolGroup-lv_root rd_LVM_LV=VolGroup/lv_swap rd_LVM_LV=VolGroup/lv_root\ninitrd /initramfs-2.6.32-431.el6.x86_64.img /initrd-plymouth.img\nboot\" | grub-bhyve -r hd0,msdos1"
+#GRUBBOOTCMD="echo -e \"linux /vmlinuz-2.6.32-431.el6.x86_64 ro root=/dev/mapper/VolGroup-lv_root rd_LVM_LV=VolGroup/lv_swap rd_LVM_LV=VolGroup/lv_root\ninitrd /initramfs-2.6.32-431.el6.x86_64.img /initrd-plymouth.img\nboot\" | grub-bhyve -r hd0,msdos1 -m $VMDIR/device.map -M $VMRAM $VMNAME"
+# GRUBISOCMD=""         # grub-bhyve command to boot from ISO
+GRUBISOCMD="echo -e \"linux /isolinux/vmlinuz text\ninitrd /isolinux/initrd.img\nboot\" | grub-bhyve -r cd0"
+#GRUBISOCMD="echo -e \"linux /isolinux/vmlinuz text\ninitrd /isolinux/initrd.img\nboot\" | grub-bhyve -r cd0 -m $VMDIR/device.map -M $VMRAM $VMNAME"
+# HOSTBRIDGE=""         # "amd_" for the AMD hostbridge
+# BHYVEFLAGS=""         # Additional bhyve(8) flags
+# appears that -w is not known on my FreeBSD 10.0-RC4
+#BHYVEFLAGS="-w"
+# VIRTIO=""             # "virtio-blk" for legacy (non-AHCI) VirtIO
+VIRTIO="virtio-blk"

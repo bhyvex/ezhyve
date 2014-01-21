@@ -1,0 +1,11 @@
+# DISTSITE=""           # Hostname and directory for binary distribution sets
+DISTSITE="$FBSD_MIRROR/pub/FreeBSD/releases/amd64/amd64/9.1-RELEASE"
+# ISOSITE=""            # Hostname and directory for ISO file
+ISOSITE="$FBSD_MIRROR/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/9.1/"
+# ISOIMG=""             # ISO filename for remote fetch
+ISOIMG="FreeBSD-9.1-RELEASE-amd64-disc1.iso"
+# GRUBBOOTCMD=""        # grub-bhyve command to boot from IMG
+# GRUBISOCMD=""         # grub-bhyve command to boot from ISO
+# HOSTBRIDGE=""         # "amd_" for the AMD hostbridge
+# BHYVEFLAGS=""         # Additional bhyve(8) flags
+# VIRTIO=""             # "virtio-blk" for legacy (non-AHCI) VirtIO

@@ -1,0 +1,14 @@
+# DISTSITE=""           # Hostname and directory for binary distribution sets
+# ISOSITE=""            # Hostname and directory for ISO file
+ISOSITE="ftp://ftp.osuosl.org/pub/damnsmall/current/"
+# ISOIMG=""             # ISO filename for remote fetch
+ISOIMG="dsl-4.4.9.iso"
+# GRUBBOOTCMD=""        # grub-bhyve command to boot from IMG
+GRUBBOOTCMD="grub-bhyve -r hd0,msdos1"
+#GRUBBOOTCMD="grub-bhyve -r hd0,msdos1 -m $VMDIR/device.map -M $VMRAM $VMNAME"
+# GRUBISOCMD=""         # grub-bhyve command to boot from ISO
+GRUBISOCMD="grub-bhyve -r cd0"
+#GRUBISOCMD="grub-bhyve -r cd0 -m $VMDIR/device.map -M $VMRAM $VMNAME"
+# HOSTBRIDGE=""         # "amd_" for the AMD hostbridge
+# BHYVEFLAGS=""         # Additional bhyve(8) flags
+# VIRTIO=""             # "virtio-blk" for legacy (non-AHCI) VirtIO
