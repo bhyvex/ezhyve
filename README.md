@@ -122,6 +122,9 @@ ezhyve.sh fetch vmname
 ezhyve.sh start vmname
 # connect to console if EZHYVE_CONSOLE is nmdm, lpc, tmux
 ezhyve.sh console vmname
+
+ezhyve.sh create VMfreebsd10 # this would create a FreeBSD 10.0-RELEASE vm config
+ezhyve.sh create -t FreeBSD -v 9.2-RELEASE VMfreebsd # this would create a FreBSD 9.2-RELEASE VM
 ```
 
 ### Creating a Linux VM
@@ -140,9 +143,6 @@ ezhyve.sh stop vmname
 ezhyve.sh start vmname
 # connect to console if EZHYVE_CONSOLE is nmdm, lpc, tmux
 ezhyve.sh console vmname
-
-ezhyve.sh create VMfreebsd10 # this would create a FreeBSD 10.0-RELEASE vm config
-ezhyve.sh create -t FreeBSD -v 9.2-RELEASE VMfreebsd # this would create a FreBSD 9.2-RELEASE VM
 ```
 
 ### Provision a FreeBSD VM
