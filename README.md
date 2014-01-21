@@ -8,7 +8,7 @@
 
 bhyve is the native FreeBSD Hypervisor (similar to xen, Linux KVM) which was introduced in FreeBSD 10. ezhyve's goal is easier creation of bhyve VMs. Currently a rc script and a startall feature are missing but its on the [TODO](https://github.com/wasted/ezhyve/blob/master/TODO) list. Check it out for things ezhyve might **not** do for you yet.
 
-ezhyve was inspired by [erdgeist's](https://twitter.com/erdgeist) [sysutils/ezjail](http://erdgeist.org/arts/software/ezjail/) and is based on Michael Dexters [bhyve-tools](http://bhyve.org/tools/).
+ezhyve was inspired by [erdgeist's](https://twitter.com/erdgeist) [sysutils/ezjail](http://erdgeist.org/arts/software/ezjail/) and is based on [Michael Dexters](https://twitter.com/michaeldexter) [bhyve-tools](http://bhyve.org/tools/).
 
 ### How to start
 - edit etc/ezhyve/ezhyve.conf to **your** needs! (PATHs)
