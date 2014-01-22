@@ -4,15 +4,16 @@
 # TODO: need to handle pfsense vm type (freenas ...) ... maybe as -v?
 
 # source our functions.sh
-if [ -e /root/wasted.io/ezhyve/etc/ezhyve/functions.sh ]; then
-	. /root/wasted.io/ezhyve/etc/ezhyve/functions.sh
+DIR="`dirname $0`/../etc"
+if [ -e ${DIR}/ezhyve/functions.sh ]; then
+	. ${DIR}/ezhyve/functions.sh
 else
 	echo "couldn't find functions.sh" && exit 1
 fi
 
 # source the bhyve.conf
-if [ -e /root/wasted.io/ezhyve/etc/ezhyve/ezhyve.conf ]; then
-	. /root/wasted.io/ezhyve/etc/ezhyve/ezhyve.conf
+if [ -e ${DIR}/ezhyve/ezhyve.conf ]; then
+	. ${DIR}/ezhyve/ezhyve.conf
 else
 	perror "couldn't find ezhyve.conf"
 fi
